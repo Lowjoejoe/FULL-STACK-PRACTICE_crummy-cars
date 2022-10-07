@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  margin: 0;
+  background: black;
+  background-image: url(https://source.unsplash.com/1600x900/?cars);
+  font-family: 'Rubik', sans-serif;
+}
+.search{
+  background: rgb(160, 161, 162); 
+}
+
+.vehicle {
+  display: inline-block;
+  background-color: rgb(249, 248, 247);
+  opacity: 85%;
+  height: auto;
+  justify-content: center;
+  margin:auto;
+  padding: 2px;
+  position: absolute;
+  bottom: 65%;
+ 
+}
+.add {
+  background: slategray;
+  padding: 4em;
+  border-radius: 20px;
+  width: auto;
+  max-width: 200px;
+  margin: auto;
+  font-family: inherit;
+  position: absolute;
+  bottom: 10%;
+  opacity: 85%;
+}

@@ -1,0 +1,8 @@
+{
+    "dev":{
+        "connectionString":"postgresql://postgres:docker@127.0.0.1:5432/carsdb"
+    },
+    "test":{"connectionString":"postgresql://postgres:docker@10.10.10.10:5432/carsdb"
+
+    }
+}
