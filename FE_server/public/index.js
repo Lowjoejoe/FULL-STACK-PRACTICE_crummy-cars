@@ -5,7 +5,7 @@ const ENV = "production";
 var resultArea = document.querySelector('.vehicle');
 // let ApiUrl = 'http://localhost:5000';
 
-let ApiUrl = ENV == "dev" ? 'http://localhost:5001': 'https://crummy-cars-api-server.onrender.com'
+let ApiUrl = ENV == "dev" ? 'http://localhost:5001': 'https://crummy-cars-api-server.onrender.com:';
 console.log("API:", ApiUrl);
 
 //Define global variables for adding vehicle 
