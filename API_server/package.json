@@ -4,7 +4,10 @@
   "description": "",
   "main": "indexServer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon indexServer.js",
+    "start:production": "node indexServer.js",
+    "start:dev": "NODE_ENV=dev nodemon indexServer.js",
+    "start:test": "NODE_ENV=test nodemon indexServer.js"
   },
   "author": "",
   "license": "ISC",

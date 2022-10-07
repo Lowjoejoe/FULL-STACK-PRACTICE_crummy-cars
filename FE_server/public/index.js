@@ -3,10 +3,10 @@ const ENV = "production";
 
 
 var resultArea = document.querySelector('.vehicle');
-let ApiUrl = 'http://localhost:5000';
+// let ApiUrl = 'http://localhost:5000';
 
-// let ApiUrl = ENV == "dev" ? 'http://localhost:5001': 'copy in path from render'
-// console.log("API:", ApiUrl);
+let ApiUrl = ENV == "dev" ? 'http://localhost:5001': 'https://crummy-cars-api-server.onrender.com'
+console.log("API:", ApiUrl);
 
 //Define global variables for adding vehicle 
 let vehicleMake = document.querySelector('.make').value;
@@ -75,8 +75,6 @@ document.querySelector("#add_vehicle").addEventListener("click", ()=>{
         }
     
     })
-
-
 
 //Add data to the DOM
 function addResultsToDOM(data){
