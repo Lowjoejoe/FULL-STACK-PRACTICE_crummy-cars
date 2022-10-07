@@ -13,8 +13,9 @@ const client = new Client ({
 client.connect(); 
 
 //set up middleware
-app.use(express.json());
 app.use(cors()); 
+app.use(express.json());
+
 
 //set up routes//
 app.get('/', (req,res)=>{
@@ -49,7 +50,6 @@ app.get('/api/vehicles/:id', (req,res,next)=>{
 //route to post new vehicle to database
 app.post('/api/vehicles', (req,res)=>{
     let newVehicle = req.body; 
-    console.log(newVehicle); 
     if(newVehicle.make && newVehicle.model && newVehicle.color && newVehicle.type && newVehicle.year && typeof newVehicle.year == 'number' && newVehicle.make.length != 0 && newVehicle.model.length !=0 && newVehicle.color.length !=0 && newVehicle.type.length !=0 && newVehicle.year.length !=0){
     client.query(`INSERT INTO vehicles (make,model,color,type,year) VALUES ('${newVehicle.make}','${newVehicle.model}','${newVehicle.color}','${newVehicle.type}',${newVehicle.year})`,
     (err)=>{

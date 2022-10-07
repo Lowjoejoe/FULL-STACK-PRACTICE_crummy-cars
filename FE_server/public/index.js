@@ -3,9 +3,9 @@ const ENV = "production";
 
 
 var resultArea = document.querySelector('.vehicle');
-// let ApiUrl = 'http://localhost:5000';
+ //let ApiUrl = 'http://localhost:5000';
 
-let ApiUrl = ENV == "dev" ? 'http://localhost:5001': 'https://crummy-cars-api-server.onrender.com:';
+let ApiUrl = ENV == "dev" ? 'http://localhost:5000': 'https://crummy-cars-api-server.onrender.com:';
 console.log("API:", ApiUrl);
 
 //Define global variables for adding vehicle 
@@ -19,7 +19,11 @@ let vehicleYear = document.querySelector('.year').value;
 //set up fetch to API 
 function pullAPIdata() {
 // var URL = 'http://localhost:5000/api/vehicles';
-fetch(`${ApiUrl}/api/vehicles`)
+fetch(`${ApiUrl}/api/vehicles`, {
+    method:'GET',
+    mode: 'cors',
+    headers: {'Content-Type': 'application/json'},
+})
 .then((response)=>response.json())
 .then((data)=>{
     addResultsToDOM(data); 

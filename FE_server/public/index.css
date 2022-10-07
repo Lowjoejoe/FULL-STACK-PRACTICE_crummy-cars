@@ -8,6 +8,14 @@ body {
   background-image: url(https://source.unsplash.com/1600x900/?cars);
   font-family: 'Rubik', sans-serif;
 }
+
+h1 {
+  text-shadow: 2px 2px; 
+}
+
+div + div { 
+  margin-left: 20px; 
+}
 .search{
   background: rgb(160, 161, 162); 
 }
@@ -16,17 +24,19 @@ body {
   display: inline-block;
   background-color: rgb(249, 248, 247);
   opacity: 85%;
+  width: auto;
   height: auto;
   justify-content: center;
   margin:auto;
   padding: 2px;
   position: absolute;
-  bottom: 65%;
+  border: 3px;
+  top: 20%;
  
 }
 .add {
   background: slategray;
-  padding: 4em;
+  padding: 3em;
   border-radius: 20px;
   width: auto;
   max-width: 200px;
