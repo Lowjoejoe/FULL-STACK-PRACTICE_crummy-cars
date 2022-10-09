@@ -1,10 +1,11 @@
 //set up dependencies 
 const express = require('express');
 const app = express(); 
-const PORT = 5000; 
+const cors = require('cors'); 
 const { Client } = require('pg'); 
 const config = require('./config.js')[process.env.NODE_ENV||"dev"]
-const cors = require('cors'); 
+
+const PORT = config.port; //5000 for localhost dev 
 
 const client = new Client ({
     connectionString: config.connectionString,
