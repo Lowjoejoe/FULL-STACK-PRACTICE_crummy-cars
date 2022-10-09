@@ -5,7 +5,7 @@
   "main": "indexServer.js",
   "scripts": {
     "start": "nodemon indexServer.js",
-    "start:production": "node indexServer.js",
+    "start:production": "node ./indexServer.js",
     "start:dev": "NODE_ENV=dev nodemon indexServer.js",
     "start:test": "NODE_ENV=test nodemon indexServer.js"
   },
