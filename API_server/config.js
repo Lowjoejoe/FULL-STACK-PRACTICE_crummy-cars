@@ -5,7 +5,9 @@ module.exports = {
         port:'5001'
     },
     production:{
-        connectionString: process.env.POSTGRES_CONNECTION_STRING,
+        connectionString: process.env.POSTGRES_CONNECTION_STRING ,
+
+        ssl: {resolveObjectURL:false},
         port: process.env.PORT
 
     }
